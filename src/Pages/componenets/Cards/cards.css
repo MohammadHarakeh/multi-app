@@ -4,7 +4,41 @@
   align-items: center;
   height: 22vh;
   width: 70%;
+  max-width: 300px;
   border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.cards h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .cards h1 {
+    font-size: 20px;
+  }
+}
+
+.cards:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 100%;
+  gap: 10px;
+}
+
+.card-wrapper span {
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
 }
 
 .all-cards-wrapper {
