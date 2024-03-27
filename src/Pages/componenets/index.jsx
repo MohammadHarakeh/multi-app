@@ -1,8 +1,8 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import Cards from "./Cards/cards";
-import { TiWeatherSunny } from "react-icons/ti";
-import { FcCalculator } from "react-icons/fc";
-import { FaNoteSticky } from "react-icons/fa6";
+import weatherImage from "../../Assets/weather.jpg";
+import calculatorImage from "../../Assets/calculator.jpg";
+import notesImage from "../../Assets/notes.jpg";
 import "./index.css";
 
 function MainPage() {
@@ -13,25 +13,22 @@ function MainPage() {
       </div>
       <div className="three-cards-wrapper">
         <Cards
-          icon={<TiWeatherSunny />}
           content={"Weather"}
-          color={"red"}
+          color={"black"}
           link={"/weather"}
-          backgroundColor={"blue"}
+          backgroundImage={weatherImage}
         ></Cards>
         <Cards
-          icon={<FcCalculator />}
           content={"Calculator"}
-          color={"green"}
+          color={"black"}
           link={"/calculator"}
-          backgroundColor={"red"}
+          backgroundImage={calculatorImage}
         ></Cards>
         <Cards
-          icon={<FaNoteSticky />}
           content={"Notes"}
-          color={"aqua"}
+          color={"black"}
           link={"/notes"}
-          backgroundColor={"grey"}
+          backgroundImage={notesImage}
         ></Cards>
       </div>
     </div>
