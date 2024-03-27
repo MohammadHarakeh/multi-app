@@ -54,7 +54,7 @@ function Weather() {
       <div className="weather-card-wrapper">
         <h1>Weather App</h1>
 
-        <div>
+        <div className="search-wrapper">
           <input
             type="text"
             placeholder="Search...."
@@ -66,16 +66,41 @@ function Weather() {
           <button onClick={searchPressed}>Search</button>
         </div>
 
-        <p>{weather.name}</p>
-
-        {weather.main && <p>{weather.main.temp}°C</p>}
-
-        <p>{weather.main && weather.weather[0].main}</p>
-        {weather.main && weather.weather[0].description && (
-          <p>({weather.weather[0].description})</p>
+        {searchPressed && weather.name && (
+          <p>
+            <b>Country: </b>
+            {weather.name}
+          </p>
         )}
 
-        <p>{predicted.hourly && predicted.hourly.temperature_2m[67]}</p>
+        {searchPressed && weather.main && (
+          <p>
+            <b>Current Temperature:</b> {weather.main.temp} °C
+          </p>
+        )}
+
+        {searchPressed && weather.main && (
+          <p>
+            <b>Conditions:</b> {weather.weather[0].main}
+          </p>
+        )}
+        {searchPressed && weather.main && weather.weather[0].description && (
+          <p>
+            <b>Description:</b> ({weather.weather[0].description})
+          </p>
+        )}
+
+        {searchPressed && predicted.hourly && (
+          <p>
+            <b>Day 2 Forecast: </b> {predicted.hourly.temperature_2m[45]} °C
+          </p>
+        )}
+
+        {searchPressed && predicted.hourly && (
+          <p>
+            <b>Day 3 Forecast: </b> {predicted.hourly.temperature_2m[68]} °C
+          </p>
+        )}
       </div>
     </div>
   );

@@ -8,27 +8,55 @@
   display: flex;
   position: absolute;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: 30%;
-  height: 40vh;
+  height: 45vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 20px;
   padding: 1%;
   border: 3px solid black;
-  background-color: rgb(245, 245, 220, 0.8);
+  background-color: rgb(245, 245, 220);
   border-radius: 15px;
 }
 
-@media screen and (max-width: 768px) {
+.search-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.search-wrapper input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.search-wrapper button {
+  width: 20%;
+  border-radius: 5px;
+}
+
+.search-wrapper button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1450px) {
   .weather-card-wrapper {
-    width: 60%;
-    height: 50vh;
+    width: 35%;
+    height: 55vh;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
+  .weather-card-wrapper {
+    width: 50%;
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .weather-card-wrapper {
     width: 80%;
     height: 60vh;
