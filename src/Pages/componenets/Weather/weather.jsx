@@ -52,7 +52,7 @@ function Weather() {
   return (
     <div className="weather-wrapper">
       <div className="weather-card-wrapper">
-        <h1>Weather App</h1>
+        <h1>Weather Forcast</h1>
 
         <div className="search-wrapper">
           <input
