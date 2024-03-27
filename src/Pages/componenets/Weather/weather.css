@@ -1,0 +1,36 @@
+.weather-wrapper {
+  background-image: url("/src/Assets/weatherBackGround.jpg");
+  height: 100vh;
+  z-index: -1;
+}
+
+.weather-card-wrapper {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 40vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 20px;
+  padding: 1%;
+  border: 3px solid black;
+  background-color: rgb(245, 245, 220, 0.8);
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .weather-card-wrapper {
+    width: 60%;
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .weather-card-wrapper {
+    width: 80%;
+    height: 60vh;
+  }
+}
