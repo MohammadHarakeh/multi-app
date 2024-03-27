@@ -18,32 +18,30 @@ function Calculator() {
 
   return (
     <div className="calculator-wrapper">
-      <div>
-        <div className="calculator">
-          <div className="display">
-            <span>0</span>
-          </div>
-
-          <div className="operators">
-            <button>/</button>
-            <button>*</button>
-            <button>+</button>
-            <button>-</button>
-
-            <button>DEL</button>
-          </div>
-
-          <div className="digits">
-            {createDigits()}
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
-          </div>
+      <div className="calculator">
+        <div className="display">
+          <span>0</span>0
         </div>
 
-        <div className="search-wrapper back-btn">
-          <button onClick={backClick}>Back</button>
+        <div className="operators">
+          <button>/</button>
+          <button>*</button>
+          <button>+</button>
+          <button>-</button>
+
+          <button>DEL</button>
         </div>
+
+        <div className="digits">
+          {createDigits()}
+          <button>0</button>
+          <button>.</button>
+          <button>=</button>
+        </div>
+      </div>
+
+      <div className="search-wrapper back-btn">
+        <button onClick={backClick}>Back</button>
       </div>
     </div>
   );
