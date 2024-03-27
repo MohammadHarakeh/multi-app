@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./weather.css";
 
 const api = {
@@ -12,6 +13,11 @@ function Weather() {
   const [predicted, setPredicted] = useState("");
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
+
+  const navigate = useNavigate();
+  const backClick = () => {
+    navigate("/");
+  };
 
   const searchPressed = async () => {
     const response = await fetch(
@@ -101,6 +107,10 @@ function Weather() {
             <b>Day 3 Forecast: </b> {predicted.hourly.temperature_2m[68]} °C
           </p>
         )}
+
+        <div className="search-wrapper back-btn">
+          <button onClick={backClick}>Back</button>
+        </div>
       </div>
     </div>
   );
