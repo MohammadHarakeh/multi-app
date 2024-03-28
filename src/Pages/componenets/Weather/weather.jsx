@@ -107,10 +107,9 @@ function Weather() {
             <b>Day 3 Forecast: </b> {predicted.hourly.temperature_2m[68]} °C
           </p>
         )}
-
-        <div className="search-wrapper back-btn">
-          <button onClick={backClick}>Back</button>
-        </div>
+      </div>
+      <div className="search-wrapper back-btn">
+        <button onClick={backClick}>Back</button>
       </div>
     </div>
   );

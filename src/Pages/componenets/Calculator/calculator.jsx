@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./calculator.css";
 
@@ -38,6 +38,33 @@ function Calculator() {
     setCalc(eval(calc).toString());
   };
 
+  const deleteLast = () => {
+    if (calc === "") {
+      return;
+    }
+    const value = calc.slice(0, -1);
+    setCalc(value);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      const { key } = event;
+      if (!isNaN(key) || key === "." || ops.includes(key)) {
+        updateCalc(key);
+      } else if (key === "Enter") {
+        calculate();
+      } else if (key === "Backspace") {
+        deleteLast();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [calc]);
+
   const navigate = useNavigate();
   const backClick = () => {
     navigate("/");
@@ -57,7 +84,7 @@ function Calculator() {
           <button onClick={() => updateCalc("+")}>+</button>
           <button onClick={() => updateCalc("-")}>-</button>
 
-          <button>DEL</button>
+          <button onClick={deleteLast}>DEL</button>
         </div>
 
         <div className="digits">
@@ -69,7 +96,7 @@ function Calculator() {
         </div>
       </div>
 
-      <div className="search-wrapper back-btn">
+      <div className="search-wrapper back-btn back-calc">
         <button onClick={backClick}>Back</button>
       </div>
     </div>
