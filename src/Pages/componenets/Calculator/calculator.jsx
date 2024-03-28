@@ -34,6 +34,10 @@ function Calculator() {
     return digits;
   };
 
+  const calculate = () => {
+    setCalc(eval(calc).toString());
+  };
+
   const navigate = useNavigate();
   const backClick = () => {
     navigate("/");
@@ -61,7 +65,7 @@ function Calculator() {
           <button onClick={() => updateCalc("0")}>0</button>
           <button onClick={() => updateCalc(".")}>.</button>
 
-          <button>=</button>
+          <button onClick={calculate}>=</button>
         </div>
       </div>
 
