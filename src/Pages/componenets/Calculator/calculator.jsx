@@ -96,7 +96,7 @@ function Calculator() {
         </div>
       </div>
 
-      <div className="search-wrapper back-btn back-calc">
+      <div className="search-wrapper back-calc">
         <button onClick={backClick}>Back</button>
       </div>
     </div>

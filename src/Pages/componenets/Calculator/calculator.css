@@ -75,30 +75,33 @@
 }
 
 .back-calc button {
-  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  margin: auto;
   width: 21%;
+  background-color: var(--primary);
 }
 
 @media screen and (max-width: 1500px) {
-  .back-btn button {
-    width: 26%;
+  .back-calc button {
+    width: 26.5%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .back-btn button {
-    width: 50%;
+  .back-calc button {
+    width: 40%;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .back-btn button {
+  .back-calc button {
     width: 65%;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .back-btnbutton {
+@media screen and (max-width: 450px) {
+  .back-calc button {
     width: 100%;
   }
 }
