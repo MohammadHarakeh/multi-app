@@ -3,6 +3,12 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  height: 100vh;
+  background-image: url("../../../Assets/notes.jpg");
+}
+
+.notes-wrapper button {
+  background-color: rgb(106, 168, 250);
 }
 
 .note {
@@ -14,7 +20,6 @@
   height: 30vh;
   position: absolute;
   padding: 10px;
-  background-color: yellow;
   border: 1px solid black;
   cursor: move;
 }
